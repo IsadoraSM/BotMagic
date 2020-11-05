@@ -29,7 +29,6 @@ bot.on('message', message => {
     mtg.card.where(obj)
     .then(cards => {
         cards.forEach(card => {
-            console.log(card)
             const embed = new Discord.MessageEmbed()
             .setColor(0x000000)
             .setDescription(`**Nome:** ${card.name} \r\n **Tipo:** ${card.type} \r\n **Custo:** ${card.manaCost} \r\n **Texto original:** ${card.originalText}`)
